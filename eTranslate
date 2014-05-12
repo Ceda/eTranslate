@@ -19,6 +19,6 @@
 #
 ################################################################################
 
-exec php -q 'libs/'extract.php 
+exec php -q 'eTrans/'extract.php 
 
 exit;

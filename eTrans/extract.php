@@ -249,7 +249,7 @@ if (!class_exists('Folder')) {
   
     public function __construct()
     {
-      $this->params['paths'] = './asdf';
+      $this->params['paths'] = '../application';
       $this->params['output'] = '';
   		$this->stdin = fopen('php://stdin', 'r');
   		$this->stdout = fopen('php://stdout', 'w');
@@ -637,7 +637,7 @@ if (!class_exists('Folder')) {
       foreach ($this->__paths as $path) {
         
         $Folder = new Folder($path);
-        $files = $Folder->findRecursive('.*\.(php|ctp|thtml|inc|tpl)', true);
+        $files = $Folder->findRecursive('.*\.(php|phtml)', true);
         $this->__files = array_merge($this->__files, $files);
       }
 
